@@ -33,6 +33,19 @@
                 <a href="https://api.coinmarketcap.com/v1/ticker/bitcoin/">BITCOIN</a>
                 <div class="btcwdgt-chart"></div>
                 <script>
+                <?php
+$slug = 'ethereum'; // find all at https://files.coinmarketcap.com/generated/search/quick_search.json
+$tick = file_get_contents('https://api.coinmarketcap.com/v1/ticker/'.$slug.'/');
+$url = $tick;
+echo $url;
+$json = file_get_contents($url);
+$data = json_decode($tick, TRUE); //decodes in associative array
+
+$ethusd = $data[0]['price_usd'];
+echo $ethusd;
+?>
+  </script>              
+                <script>
   (function(b,i,t,C,O,I,N) {
     window.addEventListener('load',function() {
       if(b.getElementById(C))return;
