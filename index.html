@@ -31,6 +31,16 @@
                 <a href="https://www.linkedin.com/in/waltertaraila/" class="btn btn-lg btn-default" style="margin:1%;">LinkedIn</a>
                 <a href="mailto:wtaraila@gmail.com" class="btn btn-lg btn-default" style="margin:1%;">Email</a>
                 <a href="https://api.coinmarketcap.com/v1/ticker/bitcoin/">Bitcoin</a>
+                <div class="btcwdgt-chart"></div>
+                <script>
+  (function(b,i,t,C,O,I,N) {
+    window.addEventListener('load',function() {
+      if(b.getElementById(C))return;
+      I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+      I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+    },false)
+  })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+</script>
             </div>
         </div>
     </div>
