@@ -1,65 +1,70 @@
-<!--
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="Walter Taraila, engineer, aerospace">
-<meta name="author" content="Walter Taraila">
-    
-   
-<title>Walter Taraila</title>
-    
-<link rel="shortcut icon" type="image/x-icon" href="http://waltertaraila.github.io/favicon.ico " /> 
-    
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<link href="cover.css" rel="stylesheet">
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddbddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
 </head>
 <body>
-<div class="site-wrapper">
-    <div class="site-wrapper-inner">
-        <div class="cover-container">
-            <div class="masthead clearfix">
-                <div class="inner">
-                    <h3 class="masthead-brand"></h3>
-                </div>
-            </div>
-            <div class="inner cover">
-                <h1 class="cover-heading">Walter Taraila</h1>
-                <p class="lead"></p>
-                <a href="https://github.com/waltertaraila/" class="btn btn-lg btn-default" style="margin:1%;" >GitHub</a>
-                <a href="https://www.linkedin.com/in/waltertaraila/" class="btn btn-lg btn-default" style="margin:1%;">LinkedIn</a>
-                <a href="mailto:wtaraila@gmail.com" class="btn btn-lg btn-default" style="margin:1%;">Email</a>
-                <a href="https://api.coinmarketcap.com/v1/ticker/bitcoin/">BITCOIN</a>
-                <div class="btcwdgt-chart"></div>
-                <script>
-                <?php
-$slug = 'ethereum'; // find all at https://files.coinmarketcap.com/generated/search/quick_search.json
-$tick = file_get_contents('https://api.coinmarketcap.com/v1/ticker/'.$slug.'/');
-$url = $tick;
-echo $url;
-$json = file_get_contents($url);
-$data = json_decode($tick, TRUE); //decodes in associative array
 
-$ethusd = $data[0]['price_usd'];
-echo $ethusd;
-?>
-  </script>              
-                <script>
-  (function(b,i,t,C,O,I,N) {
-    window.addEventListener('load',function() {
-      if(b.getElementById(C))return;
-      I=b.createElement(i),N=b.getElementsByTagName(i)[0];
-      I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
-    },false)
-  })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
-</script>
-            </div>
-        </div>
-    </div>
-</div>
-  
+<h2>Launch track record:</h2>
+
+<table>
+  <tr>
+    <th>Launch</th>
+    <th>Date</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Orb-D1</td>
+    <td>18 September 2013, 14:58:02.2 UTC</td>
+    <td>Technology demonstration</td>
+  </tr>
+  <tr>
+    <td>Orb-1</td>
+    <td>9 January 2014, 18:07:05 UTC</td>
+    <td>ISS Resupply</td>
+  </tr>
+  <tr>
+    <td>Orb-2</td>
+    <td>13 July 2014, 16:52:14 UTC</td>
+    <td>ISS Resupply</td>
+  </tr>
+  <tr>
+    <td>Orb-3</td>
+    <td>28 October 2014, 22:22:38 UTC</td>
+    <td>Failure</td>
+  </tr>
+  <tr>
+    <td>OA-5</td>
+    <td>17 October 2016, 23:45 UTC</td>
+    <td>ISS Resupply</td>
+  </tr>
+  <tr>
+    <td>Orbital ATK CRS-8E</td>
+    <td>12 November 2017, 12:19:51 UTC</td>
+    <td>ISS Resupply</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115471904-1"></script>
 <script>
@@ -70,8 +75,4 @@ echo $ethusd;
   gtag('config', 'UA-115471904-1');
 </script>
 
-  
-    
-</body>
-</html>
--->
+
